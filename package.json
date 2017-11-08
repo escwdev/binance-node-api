@@ -1,6 +1,6 @@
 {
   "name": "binance-node-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js API wrapper for Binance cryptocurrency exchange",
   "main": "binance.js",
   "scripts": {

@@ -89,7 +89,7 @@ options = {
 ```   
 `api.get24hrTicker(options)`   
 ```javascript
-object = {
+options = {
   symbol: 'string'    MANDATORY
 }
 ```   
@@ -102,7 +102,7 @@ All account endpoints require a Binance provided API key and Secret key for sign
 
 `api.placeOrder(options)`   
 ```javascript
-object = {
+options = {
   symbol: 'string',         MANDATORY
   side: ENUM,               MANDATORY 
   type: ENUM,               MANDATORY
@@ -118,7 +118,7 @@ object = {
 ```   
 `api.testNewOrder(options)`
 ```javascript
-object = {
+options = {
   symbol: 'string',         MANDATORY
   side: ENUM,               MANDATORY 
   type: ENUM,               MANDATORY
@@ -135,7 +135,7 @@ object = {
 
 `api.queryOrder(options)`
 ```javascript 
-object = {
+options = {
   symbol: 'string',     MANDATORY
   orderId: integer,
   origClientOrderId: 'string',
@@ -146,7 +146,7 @@ object = {
 
 `api.cancelOrder(options)`
 ```javascript
-object = {
+options = {
   symbol: 'string',     MANDATORY
   orderId: integer,
   origClientOrderId: 'string',
@@ -158,7 +158,7 @@ object = {
 
 `api.getOpenOrders(options)`
 ```javascript
-object = {
+options = {
   symbol: 'string',     MANDATORY
   recvWindow: integer,
   timestamp: integer    MANDATORY UNIX dateTime
@@ -167,7 +167,7 @@ object = {
 
 `api.getAllOrder(options)`
 ```javascript
-object = {
+options = {
   symbol: 'string',     MANDATORY
   orderId: integer,
   limit: integer,       Default: 500; max 500
@@ -177,7 +177,7 @@ object = {
 ```   
 `api.getAccountInfo(options)`
 ```javascript
-object = {
+options = {
   recvWindow: integer,
   timestamp: integer    MANDATORY UNIX dateTime
 }
@@ -185,7 +185,7 @@ object = {
 
 `api.getAccountTradeList(options)`
 ```javascript
-object = {
+options = {
   symbol: 'string',     MANDATORY
   limit: integer,       Default: 500; max 500
   fromId: integer,
@@ -196,7 +196,7 @@ object = {
 
 `api.makeWithdrawl(options)`
 ```javascript
-object = {
+options = {
   asset: 'string',
   address: 'string',
   amount: 'stringFloat',
@@ -208,7 +208,7 @@ object = {
 
 `api.getDepositHistory(options)`
 ```javascript
-object = {
+options = {
   asset: 'string',
   status: integer,     (0:pending, 1:sucess)
   startTime: integer,  MANDATORY UNIX dateTime
@@ -220,7 +220,7 @@ object = {
 
 `api.getWithdrawlHistory(options)`
 ```javascript
-object = {
+options = {
   asset: 'string',
   status: integer,  
   startTime: integer,  MANDATORY UNIX dateTime
