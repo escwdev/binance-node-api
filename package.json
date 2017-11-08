@@ -1,0 +1,21 @@
+{
+  "name": "binance-node-api",
+  "version": "0.1.0",
+  "description": "Node.js API wrapper for Binance cryptocurrency exchange",
+  "main": "binance.js",
+  "scripts": {
+    "test": "mocha tests --recursive --watch"
+  },
+  "author": "Eric Abrahams",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escwdev/binance-node-api.git"
+  }
+}
+
