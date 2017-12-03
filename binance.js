@@ -14,7 +14,8 @@ const Binance = {
     }
     const Public = require('./lib/public')
     const Account = require('./lib/account')
-    Object.assign(this, Public, Account)
+    const Sockets = require('./lib/websockets')
+    Object.assign(this, Public, Account, Sockets)
   },
   sign: function(queryString) {
     return '&signature=' + crypto.createHmac('sha256', this.secretKey)

@@ -1,6 +1,6 @@
 {
   "name": "binance-node-api",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Node.js API wrapper for Binance cryptocurrency exchange",
   "main": "binance.js",
   "scripts": {
@@ -11,11 +11,11 @@
   "dependencies": {
     "axios": "^0.16.2",
     "chai": "^4.1.2",
-    "chai-http": "^3.0.0"
+    "chai-http": "^3.0.0",
+    "ws": "^3.3.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/escwdev/binance-node-api.git"
   }
 }
-

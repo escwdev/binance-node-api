@@ -1,8 +1,9 @@
 # binance-node-api
 
-This is an open source project created to utilize the Binance API to support automated, algorithmic trading. The project was made and tested for Node 8.0+. It takes advantage of Axios for Promise based HTTP requests and chair for automated tests. 
+This is an open source project created to utilize the Binance API to support automated, algorithmic trading. The project was made and tested for Node 8.0+. It takes advantage of Axios for Promise based HTTP requests and Chai for automated tests. 
 
-There are no guarentees towards the stability or effectiveness of this project.
+There are no guarentees towards the stability or effectiveness of this project. Comments, 
+contributions and stars are, however, all welcome.
 
 ## Installation
 
@@ -54,7 +55,7 @@ This approach allows for more complex multi-call asynchronous functionality, esp
 
 More examples can be found in the example.js file.
 
-## Public Endpoints
+## Public Endpoints (REST)
 
 Public endpoints to not require an API Key and Secret Key.
 
@@ -96,7 +97,7 @@ options = {
 `api.getTicker()`   
 `api.getAllBookTicker`   
 
-## Account Endpoints   
+## Account Endpoints (REST)
 
 All account endpoints require a Binance provided API key and Secret key for signing requests. All crytographic signing is handled automatically by the api wrapper.
 
@@ -228,6 +229,29 @@ options = {
   recvWindow: integer,
   timestamp: integer   MANDATORY UNIX dateTime
 }
+```  
+
+## Websockets
+
+Basic websocket functionality is included. The second input parameter is a function that
+takes the socket response as a parameter. This provides flexible functionality. Simple
+examples that simply log the messages are:
+
+```javascript   
+api.getDepthStream('ETHUSDT', (msg) => {
+  let data = JSON.parse(msg)
+  console.log(data)    
+})
+
+api.getKlineStream('ETHUSDT', '1m', (msg) => {
+  let data = JSON.parse(msg)
+  console.log(data)
+})
+
+api.getAggTradeStream('ETHUSDT', (msg) => {
+  let data = JSON.parse(msg)
+  console.log(data)
+})
 ```  
 
 ## License
